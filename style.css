@@ -1,0 +1,10 @@
+h1 {
+  color: red; /*tag*/
+}
+#my {
+  color: blue; /*id*/
+}
+.my-i,
+p {
+  font-size: 36px; /*class*/
+}
