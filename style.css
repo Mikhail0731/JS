@@ -15,3 +15,18 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
 }
+#Register {
+  font-size: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  font-weight: bold;
+}
+.button {
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .button:hover {background: rgb(143, 37, 37);}
+  
