@@ -1,30 +1,43 @@
-h1 {
-  color: red; /*tag*/
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(216, 216, 204);
 }
-#my {
-  color: blue; /*id*/
+#top {
+  background-color: rgb(26, 25, 25);
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 50px;
+  
 }
 .my-i {
   font-size: 36px;
-  color: rgb(0, 102, 0, 0.5);
-  font-family: "Courier New", Courier, monospace;
+  color:aliceblue;
   font-weight: bold; /*class*/
 }
+.my-i > a:hover {
+  color: rgb(133, 122, 122);
+}
+.my-i {
+  flex-direction: row;
+}
+.phone {
+  font-size: large;
+  color: white;
+}
+
 .label {
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+
   font-size: 24px;
 }
 #Register {
   font-size: 24px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
   font-weight: bold;
 }
 .button {
   border: none;
   padding: 14px 28px;
-  font-size: 16px;
+  font-size: 24px;
   cursor: pointer;
   display: inline-block;
 }
@@ -44,20 +57,13 @@ h1 {
   text-transform: capitalize;
   line-height: 2rem;
 }
-.my-i > a:hover {
-  color: brown;
-}
-.my-i > a:active {
-  color: yellow;
-}
-#top {
-  display: flex;
-  column-gap: 24px;
-  list-style: none;
-}
-* {
+
+8/* {
   outline: 1px solid red;
 }
 body {
   width: 80%;
+}
+
+@media screen {
 }
