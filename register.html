@@ -10,12 +10,16 @@
     <script src="/script.js"></script>
 </head>
 
-<body>
-    <div>
+<body  >
+     <nav class="nav">
+                <p class=><a href="/Home.html">Home</a></p>
+                <p class=><a href="/about.html">About</a></p>
+                <p class=><a href="/Media.html">Media</a></p>
+        </nav>
+    <div class="center">
+        <form class="form">
         <h1>Register</h1>
         <p>Please fill in this form to create an account.</p>
-        <hr>
-
         <label for="email"><b>Email</b></label>
         <input type="text" placeholder="Enter Email" name="email" id="email" required>
         <br><br>
@@ -24,26 +28,13 @@
         <br><br>
         <label for="psw-repeat"><b>Repeat Password</b></label>
         <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-        <hr>
-
+        <button type="submit" class="buttonr">Register</button>
         <p>By creating an account you agree to our <a href="/readme.md">Terms & Privacy</a>.</p>
-        <button type="submit" class="registerbtn">Register</button>
+         <p>Already have an account? <a href="/Home.html"><button class="buttonr">Sign in</button></a></p>
+        </form>
+       
     </div>
-
-    <div>
-        <p>Already have an account? <a href="/Home.html"><button class="button">Sign in</button></a></p>
-    </div>
-    </form>
     <footer>
-        <nav>
-            <ul>
-                <li class="my-i"><a href="/Home.html">Home</a></li>
-                <li class="my-i"><a href="/about.html">About</a></li>
-                <li class="my-i"><a href="/Media.html">Media</a></li>
-
-            </ul>
-        </nav>
     </footer>
 </body>
-
 </html>
