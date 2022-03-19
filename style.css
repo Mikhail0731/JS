@@ -1,3 +1,6 @@
+
+  
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(216, 216, 204);
@@ -20,12 +23,21 @@ body {
   font-size: large;
   color: white;
 }
-.home {
+/*.home {
   display: flex;
   gap: 12px;
+}*/
+.home > img{ 
+  width: 10rem;
+  }
+  .home > {
+    font-size: 36px;
+  }
+ @media screen and (max-width: 400px){
+.home > img{ 
+width: 5rem;
+display: none;
 }
-.item {
-  min-height: 350px;
 }
 .label {
   font-weight: bold;
@@ -34,6 +46,7 @@ body {
 .center {
   width: 100%;
 
+align-content: space-around;
   font-size: 18px;
   display: flex;
   flex-direction: column;
@@ -43,8 +56,12 @@ body {
   background-color: rgb(162, 165, 168);
   padding: 30px;
 }
-.nav {
+.registerNav {
+  margin-bottom: 20px;
+  background-color: rgb(26, 25, 25);
+  font-size: 35px;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 #Register {
@@ -61,6 +78,7 @@ body {
 .buttonr:hover {
   background: rgb(56, 129, 56);
 }
+
 /*.registerbtn {
   border: 3px, black;
   padding: 5px 28px;
