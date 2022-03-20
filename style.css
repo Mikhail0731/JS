@@ -2,43 +2,52 @@
   
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(216, 216, 204);
+  font-size: 100%;
 }
-#top {
+.top {
   background-color: rgb(26, 25, 25);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-}
-.my-top {
   font-size: 36px;
-  color: white;
-  font-weight: bold;
-}
-*.my-i > a:hover {
-  color: rgb(133, 122, 122);
+font-family: 'Ubuntu', sans-serif;
+letter-spacing: 0.5em;
 }
 .phone {
   font-size: large;
   color: white;
 }
-/*.home {
+.my-top > :hover {
+  color: rgb(133, 122, 122)
+}
+.my-i > a:hover {
+  color: rgb(133, 122, 122);
+}
+.home {
+  font-family: 'Pacifico', cursive;
+  display: grid;
+  grid-template-columns: auto auto;
+ gap: 20px 30px;
+ font-size: 2.5em;
+}
+.module {
   display: flex;
-  gap: 12px;
-}*/
-.home > img{ 
-  width: 10rem;
-  }
-  .home > {
-    font-size: 36px;
-  }
- @media screen and (max-width: 400px){
+  flex-flow: row wrap;
+ justify-content: space-around;
+background-color: blueviolet
+}
+.module > p {
+  padding: 20px;
+width: 200px;
+text-align: center;
+}
+ /*@media screen and (max-width: 400px){
 .home > img{ 
 width: 5rem;
 display: none;
 }
-}
+}*/
 .label {
   font-weight: bold;
   font-size: 24px;
@@ -61,13 +70,15 @@ align-content: space-around;
   background-color: rgb(26, 25, 25);
   font-size: 35px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
+  font-family: 'Ubuntu', sans-serif;
+ letter-spacing: 0.5em;
 }
-#Register {
+/*#Register {
   font-size: 20px;
   font-weight: bold;
-}
+}*/
 .buttonr {
   border: 3px, black;
   padding: 5px 28px;
