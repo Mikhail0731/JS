@@ -32,11 +32,21 @@ body {
   gap: 20px 30px;
   font-size: 2.5em;
 }
+.text a {
+  color: rgb(88, 88, 192);
+  text-decoration: none;
+}
+.text > :hover {
+  text-decoration: underline;
+}
 .module {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+}
+.module-link {
+  cursor: pointer;
 }
 .module > p {
   font-family: "Prompt", sans-serif;
