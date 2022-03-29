@@ -25,18 +25,18 @@ body {
 .my-top > :hover {
   color: rgb(133, 122, 122);
 }
-.home {
+.home-container {
   font-family: "Prompt", sans-serif;
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 20px 30px;
-  font-size: 2.5em;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5em;
+  list-style-type: none;
 }
-.text a {
+.home-text a {
   color: rgb(88, 88, 192);
   text-decoration: none;
 }
-.text > :hover {
+.home-text > :hover {
   text-decoration: underline;
 }
 .module {
