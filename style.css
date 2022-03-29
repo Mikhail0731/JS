@@ -123,8 +123,8 @@ body {
   .footer {
     flex-direction: column;
   }
-  .home {
-    grid: none;
+  .home-container {
+    flex-direction: column;
   }
   .registerfooter {
     flex-direction: column;
