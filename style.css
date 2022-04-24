@@ -25,10 +25,6 @@ body {
 .my-top > :hover, .my-footer > a:hover {
   color: rgb(133, 122, 122);
 }
-.my-cart > :hover {
- border: solid, 2px, ;
-b
-}
 .home-container {
   font-family: "Prompt", sans-serif;
   display: flex;
@@ -43,6 +39,7 @@ b
 .home-text > :hover {
   text-decoration: underline;
 }
+
 .module {
   width: 100%;
   display: flex;
@@ -56,7 +53,7 @@ b
   align-items: center;
   cursor: pointer;
 }
-.module-link > :hover {
+.module-link:hover {
   background-color: rgb(29, 42, 53);
 }
 .module > p {
@@ -71,6 +68,24 @@ b
   border-color: rgb(202, 195, 186);
   border-radius: 15px;
 }
+/* STORE PAGE */
+.products {
+font-family: "Prompt", sans-serif;
+font-size: 1.1em;
+display:flex;
+flex-wrap: wrap;
+justify-content: space-around;
+
+}
+
+.products-button {
+  border: 3px, black;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  display: inline-block;
+}
+
 .footer {
   background-color: rgb(29, 42, 53);
   display: flex;
@@ -82,6 +97,7 @@ b
   font-size: 36px;
   font-family: "Ubuntu", sans-serif;
   letter-spacing: 0.5em;
+}
 .register {
   font-size: 1.5em;
   font-family: "Ubuntu", sans-serif;

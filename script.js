@@ -1,38 +1,17 @@
-
-//select new element
-const newTask = document.querySelector('#new-task')
-const addTaskBtn = document.querySelector('#add-btn')
-const taskList = document.querySelector('#task-list')
-
- const handleDeleteTask = (element) => {
-    element.remove()
-  }
-
-const handleAddTask = () => {
-//create new element
-const newTaskLi =document.createElement('li')
-const newTaskSpan =document.createElement('span')
-const newTaskDeleteBtn =document.createElement('button')
-
-//use append child to build the hierarchy
-taskList.appendChild(newTaskLi)
-newTaskLi.appendChild(newTaskSpan)
-newTaskLi.appendChild(newTaskDeleteBtn)
-
-//add classes to a new elements
-newTaskLi.classList.add('task-container', 'list-group-item')
-newTaskDeleteBtn.classList.add('btn', 'btn-danger')
-
-//add content to a new elements
-newTaskDeleteBtn.textContent ='x'
-newTaskSpan.textContent = newTask.value
-
-newTaskDeleteBtn.addEventListener('click', ()=>{
-  handleDeleteTask(newTaskLi)
-} )
+const productsElem = document.querySelector (".products");
+function renderProducts() {
+    products.forEach((product) => {
+        productsElem.innerHTML += `  <div class="products">
+        <ul class="module">
+            <li>
+                <a><img  src="${product.imgSrc}" width="400"
+                        height="400" class="home-img"></a>
+                <h4 class="home-text">${product.name}</h4>
+                <h3 class="home-text">${product.price}</h3>
+                <button class="button"> Add to Cart</button>
+            </li>
+    </div>
+       `;
+    });
 }
-
-// add event to the add button
-addTaskBtn.addEventListener('click', handleAddTask)
-
-
+renderProducts();

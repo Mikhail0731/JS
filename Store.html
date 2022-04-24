@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Store</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Prompt:wght@100&family=Ubuntu:wght@300&display=swap');
     </style>
     <link rel="stylesheet" href="/style.css">
-    <script src="/script.js"></script>
+    <script src="/products.js"></script>
+    <script src="/script.js" defer></script>
+
+
 </head>
 
 <body>
@@ -19,24 +22,27 @@
 
         <p class="my-top"><a href="/Home.html">Home</a></p>
         <p class="my-top"><a href="/Store.html">Store</a></p>
-        <p class="my-cart"> <a href="/Cart.html"><img
-                    src="/images/ys-shopping-cart-shopping-cart-icon-with-png-and-vector-format-301457.png" width="100"
-                    height="100">
-                <ul>
-                    <dt class="phone">+0123456789</dt>
-                    <dt class="phone">+9876543210</dt>
-                </ul>
+
+        src="/images/ys-shopping-cart-shopping-cart-icon-with-png-and-vector-format-301457.png" width="100"
+        height="100">
+        <ul>
+            <dt class="phone">+0123456789</dt>
+            <dt class="phone">+9876543210</dt>
+        </ul>
     </div>
     <hr>
-    <ul class="module">
-        <li>
-            <a><img class="home" src="/images/Artisan® Series 5 Quart Tilt-Head Stand Mixer.jpg" width="400"
-                    height="400" class="home-img"></a>
-            <h4 class="home-text">Artisan® Series 5 Quart Tilt-Head Stand Mixer</h4>
-            <h3 class="home-text">$199.99</h3>
-            <button class="button"> Add to Cart</button>
-        </li>
-        <li>
+    <div class="products">
+        <ul>
+            <a><img class="products-image" src="/images/Artisan® Series 5 Quart Tilt-Head Stand Mixer.jpg" width="400"
+                    height="400" class="products-text"></a>
+            <h4 class="products-text">Artisan® Series 5 Quart Tilt-Head Stand Mixer</h4>
+            <h3 class="products-price">$199.99</h3>
+            <button class="products-button"> Add to Cart</button>
+
+        </ul>
+    </div>
+
+    <!-- <li>
             <a><img class="home" src="/images/Classic™ Series 4.5 Quart Tilt-Head Stand Mixer.jpg" width="400"
                     height="400"></a>
             <h4 class="home-text">Classic™ Series 4.5 Quart Tilt-Head Stand Mixer</h4>
@@ -97,7 +103,7 @@
             <h3 class="home-text">$399.99</h3>
             <button class="button"> Add to Cart</button>
         </li>
-    </ul>
+    </ul>-->
     <hr>
     <footer class="footer">
         <p class="my-footer"><a href="/Home.html">Home</a></p>
@@ -106,6 +112,7 @@
         <p class="my-footer"><a href="/Login.html">Log in</a></p>
     </footer>
     <p class="register">Don`t have account? <a href="/register.html">Register Here</a></p>
+
 </body>
 
 </html>
