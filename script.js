@@ -8,7 +8,7 @@ function renderProducts() {
                         height="400" class="home-img"></a>
                 <h4 class="home-text">${product.name}</h4>
                 <h3 class="home-text">${product.price}</h3>
-                <button class="button"> Add to Cart</button>
+                <button class="button" > Add to Cart</button>
             </li>
     </div>
        `;
