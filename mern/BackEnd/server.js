@@ -26,9 +26,9 @@ app.listen(process.env.PORT || 3300, function () {
 
 
 
-/*app.get("/api/", () => {
+app.get("/api/", () => {
     console.log("One more check")
-})*/
+})
 
 /*app.get('/', (req, res) => {
     res.sendFile('/Users/Михаил/Desktop/IT/JS' + '/Cart.html')
