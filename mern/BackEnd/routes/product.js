@@ -5,6 +5,7 @@ const {
   verifyTokenAndAdmin,
 } = require("./verifyToken");
 const uuid = require("uuid");
+const { restart } = require("nodemon");
 const router = require("express").Router();
 
 //CREATE
@@ -75,7 +76,7 @@ router.get("/", async (req, res) => {
     } else {
       products = await Product.find();
     }
-
+//res.setHeader('Access-Control-Allow-Origin', '*')
     res.status(200).json(products);
   } catch (err) {
     res.status(500).json(err);
