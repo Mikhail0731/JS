@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken");
 
 //REGISTER
 router.post("/register", async (req, res) => {
+  
   const newUser = new User({
     username: req.body.username,
     email: req.body.email,
@@ -18,6 +19,7 @@ router.post("/register", async (req, res) => {
     const savedUser = await newUser.save();
     res.status(201).json(savedUser);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -25,6 +27,7 @@ router.post("/register", async (req, res) => {
 //LOGIN
 
 router.post("/login", async (req, res) => {
+  console.log(req.body);
     try{
         const user = await User.findOne(
             {
@@ -60,6 +63,7 @@ router.post("/login", async (req, res) => {
         res.status(200).json({...others, accessToken});
 
     }catch(err){
+      console.log(err);
         res.status(500).json(err);
     }
 

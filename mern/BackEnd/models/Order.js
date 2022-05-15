@@ -1,22 +1,21 @@
 const mongoose = require("mongoose")
-
+const uuid = require("uuid");
 
 const OrderSchema = new mongoose.Schema({
-    Userid: {type: Number, required:true, unique:true},
+    _id: {type: String, default: uuid.v1},
+    userId: {type: String, required: true},
     products: [{
         productId: {
             type: String,
         },
         quantity: {
             type: Number,
-            default: 1,
+            default: 0,
         },
     },
 ],
   amount: {type: Number, required: true },
   status: {type: String, default: "pending"},
-},
- {timestamps: true}
- );
+});
 
  module.exports = mongoose.model("Order",OrderSchema);

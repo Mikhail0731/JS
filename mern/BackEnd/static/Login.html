@@ -10,7 +10,32 @@
         @import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Prompt:wght@100&family=Ubuntu:wght@300&display=swap');
     </style>
     <link rel="stylesheet" href="/style.css">
+    <script>
+        function login() {
 
+            fetch('http://localhost:3300/api/auth/login', {
+                method: "POST", headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(Object.fromEntries(new FormData(document.getElementById("log"))))
+            })
+
+                .then(response => {
+
+                    if (response.status == 200) {
+                        alert("user logged in")
+                        return response.json();
+
+
+                    }
+                }
+                )
+                .then(user => {
+
+                })
+            return false;
+        }
+    </script>
 </head>
 
 <body>
@@ -27,15 +52,14 @@
     <br>
     <hr>
     <div class="center">
-        <form class="form">
-            <label class="label">First Name</label>
-            <input type="text"><br><br>
-            <label class="label" for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+        <form class="form" id="log">
+
+            <label class="label" for="username"><b>UserName</b></label>
+            <input type="text" placeholder="Enter UserName" name="username" id="username" required>
             <br><br>
-            <label class="label">Password <input type="password">
+            <label class="label">Password <input type="password" name="password" id="password">
             </label><br><br>
-            <button type="submit" class="button">Sign in</button>
+            <button type="submit" class="button" onclick="return login();">Sign in</button>
             <br><br>
 
             <label class="label">Remember me<input type="checkbox"></label>

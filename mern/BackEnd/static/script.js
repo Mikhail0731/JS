@@ -26,3 +26,20 @@ fetch('http://localhost:3300/api/products')//, { method: "GET", mode: 'cors', he
   
 }
 renderProducts();
+
+
+/*<div class="center">
+<form class="form">
+    <label class="label">First Name</label>
+    <input type="text"><br><br>
+    <label class="label" for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    <br><br>
+    <label class="label">Password <input type="password">
+    </label><br><br>
+    <button type="submit" class="button">Sign in</button>
+    <br><br>
+
+    <label class="label">Remember me<input type="checkbox"></label>
+</form>
+</div>*/
