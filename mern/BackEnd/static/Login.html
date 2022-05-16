@@ -12,30 +12,36 @@
     <link rel="stylesheet" href="/style.css">
     <script>
         function login() {
-
             fetch('http://localhost:3300/api/auth/login', {
                 method: "POST", headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(Object.fromEntries(new FormData(document.getElementById("log"))))
             })
-
                 .then(response => {
-
                     if (response.status == 200) {
                         alert("user logged in")
                         return response.json();
-
-
                     }
-                }
-                )
+                })
                 .then(user => {
+                    // Store
+                    localStorage.setItem("currentUser", JSON.stringify(user));
+                    window.location.href = '/Home.html';
 
+
+
+
+
+                    // Retrieve document.getElementById("result").innerHTML = localStorage.getItem("username");
                 })
             return false;
         }
     </script>
+
+
+
+
 </head>
 
 <body>

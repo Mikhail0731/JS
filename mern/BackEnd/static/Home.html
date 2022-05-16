@@ -10,7 +10,22 @@
         @import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Prompt:wght@100&family=Ubuntu:wght@300&display=swap');
     </style>
     <link rel="stylesheet" href="/style.css">
+    <script>
+        window.onload = function (e) {
+            var user = JSON.parse(localStorage.getItem("currentUser"));
 
+            if (user != null && user != undefined) {
+                document.getElementById("user").style.display = 'inline';
+                document.getElementById("user").innerText = user.username;
+                document.getElementById("loginlink").style.display = 'none';
+            } else {
+                document.getElementById("user").style.display = 'none';
+                document.getElementById("loginlink").style.display = 'inline';
+            }
+
+        }
+
+    </script>
 </head>
 
 <body>
@@ -19,8 +34,8 @@
 
         <p class="my-top"><a href="/Home.html">Home</a></p>
         <p class="my-top"><a href="/Store.html">Store</a></p>
-        <p class="my-footer"><a href="/Login.html">Log in</a></p>
-
+        <p class="my-footer" id="loginlink"><a href="/Login.html">Log in</a></p>
+        <p class="my-footer" id="user"></p>
         <ul>
             <dt class="phone">+0123456789</dt>
             <dt class="phone">+9876543210</dt>
