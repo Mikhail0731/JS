@@ -127,10 +127,18 @@ justify-content:space-around;
 .button:hover {
   background: rgb(29, 42, 53);
 }
+.subtotal-form {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.3em;
+ 
+}
+
+
+
 .form {
   background-color: rgb(162, 165, 168);
   padding: 30px;
-  height: 400px;
+  height: auto;
 }
 @media only screen and (max-width: 600px), (max-width: 800px) {
   .top {
