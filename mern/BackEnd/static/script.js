@@ -5,7 +5,12 @@ const productsElem = document.querySelector (".products");
 function refreshcart (){
   var cart = JSON.parse(localStorage.getItem("cart"));
 if (cart != null && cart != undefined) {
-    document.getElementById("productcount").innerText = cart.products.length;
+  var cnt = 0;
+  cart.products.forEach((x,i)=>{
+    cnt += x.quantity;
+  
+  })
+    document.getElementById("productcount").innerText = cnt;
 } else {
     document.getElementById("productcount").innerText = 0;
 }
@@ -20,25 +25,38 @@ function add(id){
   }
   var cart = JSON.parse(localStorage.getItem("cart"));
   if (cart != null && cart != undefined) {
-    /*fetch(`http://localhost:3300/api/carts/${cart._id}`, {
-      method: "POST", headers: {
-          'Content-Type': 'application/json'
+    var found = false;
+   cart.products.forEach((x,i)=>{
+     if (x.productId == id){
+       x.quantity +=1; 
+       found = true;
+     }
+   })
+   if (!found){
+     cart.products.push( {
+      productId: id,
+      quantity: 1
+    });
+   }
+    fetch(`http://localhost:3300/api/carts/${cart._id}`, {
+      method: "PUT", headers: {
+          'Content-Type': 'application/json',
+          'token': `Bearer ${user.accessToken}`
       },
-      body: JSON.stringify(Object.fromEntries(new FormData(document.getElementById("log"))))
+      body: JSON.stringify(cart)
   })
       .then(response => {
           if (response.status == 200) {
-              alert("user logged in")
+              alert("product added")
               return response.json();
           }
       })
-      .then(user => {
-          // Store
-          localStorage.setItem("currentUser", JSON.stringify(user));
-          window.location.href = '/Home.html';
-      })*/
-      cart.productcount += 1;
-      localStorage.setItem("cart", JSON.stringify(cart));
+      .then(c => {
+         cart = c
+         localStorage.setItem("cart", JSON.stringify(cart));
+         refreshcart();
+      })
+      
   } else {
     cart = {
       userId: user._id, 
@@ -66,10 +84,11 @@ function add(id){
       .then(c => {
          cart = c
          localStorage.setItem("cart", JSON.stringify(cart));
+         refreshcart();
       })
   }
   
-  refreshcart();
+  
   return false;
 }
 
