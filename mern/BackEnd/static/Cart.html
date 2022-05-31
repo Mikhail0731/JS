@@ -38,14 +38,17 @@
                             sum += product.quantity * product.price;
                             productsElem.innerHTML += `
           <li>
-              <a class="home-text">${product.productName}</a>&nbsp; $
+              <a class="home-text">${product.productName}</a>&nbsp; <br><br>$ 
               <a class="home-text">${product.price}</a>x
               <a class="home-text">${product.quantity}</a>=$
-              <a class="home-text">${product.quantity * product.price}</a>
+              <a class="home-text">${product.quantity * product.price}</a><br><br>
           </li>
      `;
                         });
-                        productsElem.innerHTML += `<li>TOTAL:${sum}</li>`
+                        productsElem.innerHTML += `<li>TOTAL:${sum}
+                            
+                            </li>`
+
                     })
             }
 
@@ -53,6 +56,7 @@
         }
         renderCart();
     </script>
+
 </head>
 
 <body>
@@ -77,11 +81,13 @@
     <ul id="cart">
 
     </ul>
-
+    <button type="submit" class="button" onclick="window.open('http://localhost:3300/Order.html')">Proceed to checkout
+    </button>
+    <br><br>
     <footer class="footer">
         <p class="my-footer"><a href="/Home.html">Home</a></p>
         <p class="my-footer"><a href="/Store.html">Store</a></p>
-        <p class="my-footer"><a href="/Login.html">Log in</a></p>
+
     </footer>
 
 </body>

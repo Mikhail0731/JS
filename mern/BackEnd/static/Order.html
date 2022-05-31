@@ -10,6 +10,23 @@
         @import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Prompt:wght@100&family=Ubuntu:wght@300&display=swap');
     </style>
     <link rel="stylesheet" href="/style.css">
+    <script>
+        window.onload = function (e) {
+            var user = JSON.parse(localStorage.getItem("currentUser"));
+
+            if (user != null && user != undefined) {
+                document.getElementById("user").style.display = 'inline';
+                document.getElementById("user").innerText = user.username;
+                document.getElementById("loginlink").style.display = 'none';
+            } else {
+                document.getElementById("user").style.display = 'none';
+                document.getElementById("loginlink").style.display = 'inline';
+            }
+
+            refreshcart();
+        }
+
+    </script>
 </head>
 
 <body>
@@ -18,6 +35,7 @@
         <br>
         <p class="my-top"><a href="/Home.html">Home</a></p>
         <p class="my-top"><a href="/Store.html">Store</a></p>
+        <p class="my-footer" id="user"></p>
         <p class="my-footer" id="cart"><a href="/Cart.html">Cart</a><a id="productcount"></a></p>
         <ul>
             <dt class="phone">+0123456789</dt>
@@ -86,8 +104,8 @@
                     </div>
                     <label>
                         <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-                    </label>
-                    <input type="submit" value="Continue to checkout" class="btn">
+                    </label><br>
+                    <input type="submit" class="button" value="Continue to checkout" class="btn">
                 </form>
             </div>
         </div>
